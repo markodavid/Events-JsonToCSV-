@@ -3,9 +3,9 @@ import codecs
 
 with open('events.json') as json_data:
     data = json.load(json_data)
-    fo = codecs.open('nuevoEvento.txt', encoding='utf-8',mode="wb")
-    fo.write("event" + "," + "programStage" + "," + "program" + "," + "orgUnit" + "," + "eventDate" +"," + "voucher" + "," + "cui" + "edad" + ","+ "comoSeEntero" + "," +
-             "utilizacionMetodo" + "," + "presentaSintomas" + "razonUso" + "metodoProvisto" + "ocasion" + "tipoProducto" + "servicioProvisto" + "descontinuacion" +"\n")
+    fo = codecs.open('nuevoEvento.csv', encoding='utf-8',mode="wb")
+    fo.write("event" + "," + "programStage" + "," + "program" + "," + "orgUnit" + "," + "eventDate" +"," + "voucher" + "," + "cui" + "," + "edad" + ","+ "comoSeEntero" + "," +
+             "utilizacionMetodo" + "," + "presentaSintomas" + "," + "razonUso" + "," + "metodoProvisto" + "," + "ocasion" + "," + "tipoProducto" + "," + "servicioProvisto" + "," + "descontinuacion" +"\n")
 
     for r in data["events"]:
         fo.write(r["event"]+","+r["programStage"] + "," + r["program"]+ "," + r["orgUnit"]+ "," + r["eventDate"])
